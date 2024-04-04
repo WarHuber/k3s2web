@@ -24,17 +24,17 @@
             <h1 class="mb-0">Chrono</h1>
         </header>    
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
-                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="work.html">Work Page</a></li>
-            </ul>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="../index.html">Home</a>
+                <a class="nav-item nav-link" href="./registration.html">Registration</a>
+                <a class="nav-item nav-link active" href="./login.html">Login<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="./profile.html">Profile</a>
+                <a class="nav-item nav-link" href="./about.html">About</a>
+                <a class="nav-item nav-link" href="./work.html">Work Page</a>
+            </div>
         </nav>
         <main class="my-4">
-            <form>
+            <form id="login-form">
                 <div class="form-group">
                     <label for="email">Email address</label>
                     <input type="email" class="form-control" id="email" placeholder="Enter email">
@@ -50,5 +50,6 @@
     <footer class="text-center my-4">
         <p>&copy; 2024 Chrono. All rights reserved.</p>
     </footer>
+    <script src="../js/model/login.js"></script>
 </body>
 </html>
