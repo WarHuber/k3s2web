@@ -23,14 +23,14 @@
             <h1 class="mb-0">Chrono</h1>
         </header>    
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
-                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="work.html">Work Page</a></li>
-            </ul>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="../index.html">Home</a>
+                <a class="nav-item nav-link" href="./registration.html">Registration</a>
+                <a class="nav-item nav-link" href="./login.html">Login</a>
+                <a class="nav-item nav-link" href="./profile.html">Profile</a>
+                <a class="nav-item nav-link" href="./about.html">About</a>
+                <a class="nav-item nav-link active" href="./work.html">Work Page<span class="sr-only">(current)</span></a>
+            </div>
         </nav>
         <main class="my-4">
             <h2>Track Your Work</h2>
@@ -55,22 +55,21 @@
                     <textarea class="form-control" id="session-description" rows="3" placeholder="Describe the work session"></textarea>
                 </div>
                 <button type="button" class="btn btn-primary" id="start-session">Start Session</button>
-                <button type="button" class="btn btn-secondary" id="pause-session" disabled>Pause Session</button>
-                <button type="button" class="btn btn-success" id="save-session" disabled>Save Progress</button>
             </form>
 
             <!-- Previous Sessions List -->
             <h3 class="mt-4">Previous Sessions</h3>
             <ul id="previous-sessions-list" class="list-group">
-                <!-- Previous sessions will be dynamically listed here -->
-                <li class="list-group-item">Session 1: 1 hour, 30 minutes - Coding</li>
-                <li class="list-group-item">Session 2: 2 hours, 15 minutes - Design Meeting</li>
-                <li class="list-group-item">Session 3: 45 minutes - Research</li>
+                <!-- placeholder -->
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>No previous sessions</span>
+                </li>
             </ul>
         </main>
     </div>
     <footer class="text-center my-4">
         <p>&copy; 2024 Chrono. All rights reserved.</p>
     </footer>
+    <script type="module" src="../js/main.js"></script>
 </body>
 </html>
