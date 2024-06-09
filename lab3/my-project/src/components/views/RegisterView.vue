@@ -36,10 +36,10 @@
   </template>
   
   <script>
-  import { mapActions } from 'vuex';
-  import AppHeader from './common/AppHeader.vue';
-  import AppNavbar from './common/AppNavbar.vue';
-  import AppFooter from './common/AppFooter.vue';
+  import axios from 'axios';
+  import AppHeader from '../common/AppHeader.vue';
+  import AppNavbar from '../common/AppNavbar.vue';
+  import AppFooter from '../common/AppFooter.vue';
   
   export default {
     components: {
@@ -59,7 +59,17 @@
       };
     },
     methods: {
-      ...mapActions('user', ['register'])
+      async register() {
+          try {
+            const response = await axios.post('http://localhost:3000/api/register', this.user);
+            console.log('Registration successful', response.data);
+            // Redirect and display success message
+            this.$router.push('/login');
+            alert('Registration successful! Please log in to continue.');
+          } catch (error) {
+            console.error('Registration failed', error.response.data.error);
+          }
+      }
     }
   }
   </script>

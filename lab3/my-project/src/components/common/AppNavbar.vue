@@ -1,15 +1,15 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="navbar-nav">
-        <router-link class="nav-item nav-link" to="/">Home</router-link>
-        <router-link class="nav-item nav-link" to="/register">Registration</router-link>
-        <router-link class="nav-item nav-link" to="/login">Login</router-link>
-        <router-link class="nav-item nav-link" to="/profile">Profile</router-link>
-        <router-link class="nav-item nav-link" to="/about">About</router-link>
-        <router-link class="nav-item nav-link" to="/work">Work Page</router-link>
+        <router-link to="/" class="nav-item nav-link">Home</router-link>
+        <router-link to="/about" class="nav-item nav-link">About</router-link>
+        <router-link to="/register" class="nav-item nav-link">Register</router-link>
+        <router-link to="/login" class="nav-item nav-link">Login</router-link>
+        <router-link to="/profile" class="nav-item nav-link">Profile</router-link>
+        <router-link to="/work" class="nav-item nav-link">Work Page</router-link>
       </div>
     </nav>
-  </template>
+  </template>  
 
   <script>
   export default {
@@ -17,3 +17,9 @@
   }
   </script>
   
+  <style scoped>
+    .nav-item .router-link-active {
+    font-weight: bold;
+    color: #007bff; /* Bootstrap primary color */
+    }
+  </style>

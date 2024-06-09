@@ -20,9 +20,9 @@
   </template>
   
   <script>
-  import AppHeader from './common/AppHeader.vue';
-  import AppNavbar from './common/AppNavbar.vue';
-  import AppFooter from './common/AppFooter.vue';
+  import AppHeader from '../common/AppHeader.vue';
+  import AppNavbar from '../common/AppNavbar.vue';
+  import AppFooter from '../common/AppFooter.vue';
   import axios from 'axios';
   
   export default {

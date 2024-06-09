@@ -19,31 +19,19 @@ export default new Vuex.Store({
   },
   actions: {
     async register({ commit }, user) {
-      try {
-        const response = await axios.post('/api/register', user);
-        commit('setUser', response.data);
-        return response.data;
-      } catch (error) {
-        throw error;
-      }
+      const response = await axios.post('/api/register', user);
+      commit('setUser', response.data);
+      return response.data;
     },
     async login({ commit }, credentials) {
-      try {
-        const response = await axios.post('/api/login', credentials);
-        commit('setUser', response.data);
-        return response.data;
-      } catch (error) {
-        throw error;
-      }
+      const response = await axios.post('/api/login', credentials);
+      commit('setUser', response.data);
+      return response.data;
     },
     async fetchSessions({ commit }) {
-      try {
-        const response = await axios.get('/api/sessions');
-        commit('setSessions', response.data);
-        return response.data;
-      } catch (error) {
-        throw error;
-      }
+      const response = await axios.get('/api/sessions');
+      commit('setSessions', response.data);
+      return response.data;
     }
   }
 });
